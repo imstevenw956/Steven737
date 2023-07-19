@@ -134,6 +134,10 @@ a:visited {
     transform: translateZ(0);
 }
 
+.navbar-hover a:hover {
+    color: brown;
+}
+
 .navbar-hover:hover {
     transform: scale(1.1);
 }
