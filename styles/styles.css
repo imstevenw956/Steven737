@@ -77,6 +77,11 @@ p {
 a {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 1.3rem;
+    color: inherit;
+}
+
+a:hover {
+    color: brown;
 }
 
 a:visited {
