@@ -1,6 +1,6 @@
 // navbar for all pages
-const navbar = $('.navbar');
-const footer = $('.footer');
+const navbar = $('.navbar-js');
+const footer = $('.footer-js');
 
 $.get('/navbar.html', function(data){
     navbar.html(data);
