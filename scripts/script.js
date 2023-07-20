@@ -24,3 +24,13 @@ $.get('/footer.html', function(data){
     footer.html(data);
 })
 
+$(document).ready(function(){
+    Swal.fire({
+        title: 'Hey there!',
+        text: 'Sorry to mobile users, responsive design is on its way!',
+        icon: 'warning',
+        confirmButtonText: 'Cool!',
+        color: '#a52a2a',
+    })
+})
+
