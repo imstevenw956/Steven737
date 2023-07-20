@@ -25,7 +25,6 @@ $.get('/footer.html', function (data) {
 })
 
 var warningSign = localStorage.getItem('warningSign');
-
 if (!warningSign) {
     $(document).ready(function () {
         Swal.fire({
