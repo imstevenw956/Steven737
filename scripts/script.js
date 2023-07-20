@@ -2,13 +2,13 @@
 const navbar = $('.navbar-js');
 const footer = $('.footer-js');
 
-$.get('/navbar.html', function(data){
+$.get('/navbar.html', function (data) {
     navbar.html(data);
 })
 
 // sticky navbar
-$(document).ready(function() {
-    $(window).scroll(function() {
+$(document).ready(function () {
+    $(window).scroll(function () {
         var nav = $('.sticky-navbar');
         if ($(window).scrollTop() > 0) {
             nav.addClass('sticky');
@@ -20,17 +20,22 @@ $(document).ready(function() {
 })
 
 // footer for all pages
-$.get('/footer.html', function(data){
+$.get('/footer.html', function (data) {
     footer.html(data);
 })
 
-$(document).ready(function(){
-    Swal.fire({
-        title: 'Hey there!',
-        text: 'Sorry to mobile users, responsive design is on its way!',
-        icon: 'warning',
-        confirmButtonText: 'Cool!',
-        color: '#a52a2a',
-    })
-})
+var warningSign = localStorage.getItem('warningSign');
 
+if (!warningSign) {
+    $(document).ready(function () {
+        Swal.fire({
+            title: 'Hey there!',
+            text: 'Sorry to mobile users, responsive design is on its way!',
+            icon: 'warning',
+            confirmButtonText: 'Cool!',
+            color: '#a52a2a',
+        });
+    });
+
+    localStorage.setItem('warningSign', true);
+}
